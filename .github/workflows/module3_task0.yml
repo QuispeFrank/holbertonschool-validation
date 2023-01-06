@@ -1,0 +1,8 @@
+name: module3_task0
+on: [push]
+jobs:
+  get-help:
+    runs-on: ubuntu-latest
+    steps:
+      - run: cd module3_task0
+      - run: make help
