@@ -30,6 +30,7 @@ This project needs the following tools / services:
 * package: Create a file named awesome-website.zip.
 * unit-tests:
 * integration-tests:
+* validate:
 * help: Shows a short help description about Makefile usage.
 
 ## Usage

@@ -21,6 +21,9 @@ unit-tests: ## ERROR: No comment found for target unit-tests in ./Makefile
 .PHONY: integration-tests
 integration-tests: ## ERROR: No comment found for target integration-tests in ./Makefile
 
+.PHONY: validate
+validate: ## ERROR: No comment found for target validate in ./Makefile
+
 .PHONY: lint
 lint:
 	@markdownlint README.md DEPLOY.md
