@@ -18,6 +18,9 @@ package: ## Create a file named awesome-website.zip
 .PHONY: unit-tests
 unit-tests: ## ERROR: No comment found for target unit-tests in ./Makefile
 
+.PHONY: integration-tests
+integration-tests: ## ERROR: No comment found for target integration-tests in ./Makefile
+
 .PHONY: lint
 lint:
 	@markdownlint README.md DEPLOY.md

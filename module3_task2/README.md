@@ -29,6 +29,7 @@ This project needs the following tools / services:
 * post: Create a new blog post whose filename and title come from the environment variables POST_TITLE and POST_NAME.
 * package: Create a file named awesome-website.zip.
 * unit-tests:
+* integration-tests:
 * help: Shows a short help description about Makefile usage.
 
 ## Usage
