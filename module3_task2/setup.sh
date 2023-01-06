@@ -3,6 +3,7 @@
 # 1
 apt-get update && apt-get install -y wget make
 apt-get install markdown -y
+apt-get install gzip
 #npm install markdownlint --save-dev
 npm install markdownlint-cli -g -y
 wget https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extended_0.109.0_Linux-64bit.tar.gz
