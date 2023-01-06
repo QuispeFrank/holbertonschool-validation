@@ -47,28 +47,3 @@ the environment variables POST_TITLE and POST_NAME.
 * validate:
 * help: Shows a short help description about Makefile usage.
 
-## Usage
-
-```
-text
-
-➜ ls -1 ./dist/
-➜ make build
-➜ ls -1 ./dist/index.html
-index.html
-
-➜ ls -1 ./content/posts/
-welcome.md
-➜ make POST_NAME=who-are-we POST_TITLE="Who are we" post
-➜ ls -1 ./content/posts/
-welcome.md who-are-we.md
-
-➜ make clean
-➜ ls -1 ./dist/
-➜
-
-➜ make help
-cook: Prepare a meal in the current kitchen
-help: Show this help usage
-
-```
