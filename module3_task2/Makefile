@@ -12,11 +12,11 @@ post: ## Create a new blog post whose filename and title come from the environme
 	@sed -i '0,/title/s/.*title.*/title: "$(POST_TITLE)"/' content/posts/$(POST_NAME).md
 
 .PHONY: package
-package: ##  create a file named awesome-website.zip
+package: ## Create a file named awesome-website.zip
 	@zip awesome-website.zip dist
 
 .PHONY: unit-tests
-unit-tests:
+unit-tests: ## ERROR: No comment found for target unit-tests in ./Makefile
 
 .PHONY: lint
 lint:
