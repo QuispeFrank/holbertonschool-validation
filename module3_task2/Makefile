@@ -13,7 +13,7 @@ post: ## Create a new blog post whose filename and title come from the environme
 
 .PHONY: package
 package: ## Create a file named awesome-website.zip
-	@zip awesome-website.zip dist
+	@zip awesome-website.zip dist/
 
 .PHONY: unit-tests
 unit-tests: ## ERROR: No comment found for target unit-tests in ./Makefile
