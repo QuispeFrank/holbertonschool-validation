@@ -18,3 +18,7 @@ jobs:
         run: |
           cd module3_task1
           make build
+      - name: make package
+        run: |
+          cd module3_task1
+          make package
