@@ -1,16 +1,20 @@
 ---
-name: module3_task0
+name: module3_task1
 on:
   push:
   schedule:
     - cron: '9 9 * * *'
 jobs:
   make-help:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: help me make!
+      - name: setup
         run: |
-          cd module3_task0
-          make help
+          cd module3_task1
+          ./setup.sh
+      - name: make build
+        run: |
+          cd module3_task1
+          make build
