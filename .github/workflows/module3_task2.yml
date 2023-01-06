@@ -34,3 +34,11 @@ jobs:
         run: |
           cd module3_task2
           make unit-tests
+      - name: integration-tests
+        run: |
+          cd module3_task2
+          make integration-tests
+      - name: validate
+        run: |
+          cd module3_task2
+          make validate
