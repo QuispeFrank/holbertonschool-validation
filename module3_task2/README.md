@@ -50,6 +50,7 @@ the environment variables POST_TITLE and POST_NAME.
 ## Usage
 
 ```
+text
 
 ➜ ls -1 ./dist/
 ➜ make build
