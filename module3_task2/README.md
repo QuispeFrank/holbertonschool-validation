@@ -46,4 +46,3 @@ the environment variables POST_TITLE and POST_NAME.
 * integration-tests:
 * validate:
 * help: Shows a short help description about Makefile usage.
-
