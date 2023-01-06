@@ -2,6 +2,8 @@
 name: module3_task1
 on:
   push:
+    paths:
+      - 'module3_task1/**'
   schedule:
     - cron: '9 9 * * *'
 jobs:
