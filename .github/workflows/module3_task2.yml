@@ -18,10 +18,6 @@ jobs:
         run: |
           cd module3_task2
           ./setup.sh
-      - name: make build
-        run: |
-          cd module3_task2
-          make build
       - name: make package
         run: |
           cd module3_task2
@@ -42,3 +38,7 @@ jobs:
         run: |
           cd module3_task2
           make validate
+      - name: make build
+        run: |
+          cd module3_task2
+          make build
