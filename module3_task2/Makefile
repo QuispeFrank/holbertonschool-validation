@@ -13,6 +13,7 @@ post: ## Create a new blog post whose filename and title come from the environme
 
 .PHONY: package
 package: ## Create a file named awesome-website.zip
+	@make build
 	@zip awesome-website.zip dist/ -r
 
 .PHONY: unit-tests
