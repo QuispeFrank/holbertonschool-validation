@@ -25,6 +25,7 @@ jobs:
       - name: make package
         run: |
           cd module3_task2
+          make build
           make package
       - name: make lint
         run: |
