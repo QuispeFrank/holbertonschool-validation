@@ -10,11 +10,35 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
+      - name: node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
       - name: setup
         run: |
-          cd module3_task1
+          cd module3_task2
           ./setup.sh
       - name: make build
         run: |
-          cd module3_task1
+          cd module3_task2
           make build
+      - name: make package
+        run: |
+          cd module3_task2
+          make package
+      - name: make lint
+        run: |
+          cd module3_task2
+          make lint
+      - name: unit-tests
+        run: |
+          cd module3_task2
+          make unit-tests
+      - name: integration-tests
+        run: |
+          cd module3_task2
+          make integration-tests
+      - name: validate
+        run: |
+          cd module3_task2
+          make validate
