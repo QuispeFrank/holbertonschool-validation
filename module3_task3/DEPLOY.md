@@ -14,6 +14,10 @@ you can stop it ...
 
 you can customize it ...
 
-## How to “quickly” verify that the application is running (healthcheck)?
+## How to “quickly” verify that the application is running?
 
 you can check ...
+
+## zip
+
+## tag
