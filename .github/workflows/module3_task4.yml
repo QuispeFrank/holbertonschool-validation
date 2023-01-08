@@ -7,7 +7,7 @@ on:
     branch:
       - 'main'
     tags:
-      - '1.*.*'
+      - '1.0.3'
   schedule:
     - cron: '9 9 * * *'
 jobs:
@@ -60,13 +60,13 @@ jobs:
 
       - name: release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/1.*.*')
+        if: startsWith(github.ref, 'refs/tags/1.0.3')
         with:
           files: |
             module3_task4/awesome-website.zip
             module3_task4/DEPLOY.md
           body: |
-            # 1.0.2
+            # 1.0.3
 
             A quickstart of hugo website and how to easy set it.
             ## What is in the archive and how to unarchive it?
