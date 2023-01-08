@@ -66,7 +66,7 @@ jobs:
             module3_task4/awesome-website.zip
             module3_task4/DEPLOY.md
           body: |
-            # APLICATION'S DEPLOYMENT
+            # 1.0.2
 
             A quickstart of hugo website and how to easy set it.
             ## What is in the archive and how to unarchive it?
