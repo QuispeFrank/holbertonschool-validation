@@ -1,11 +1,13 @@
 ---
-name: module3_task2
+name: module3_task3
 on:
   push:
-    paths:
-      - 'module3_task2/**'
+    #paths:
+      #- 'module3_task3/**'
     branch:
       - 'main'
+    tags:
+      - '1.0.0'
   schedule:
     - cron: '9 9 * * *'
 jobs:
@@ -20,29 +22,50 @@ jobs:
           node-version: '14'
       - name: setup
         run: |
-          cd module3_task2
+          cd module3_task3
           ./setup.sh
       - name: make build
         run: |
-          cd module3_task2
+          cd module3_task3
           make build
-      - name: make package
-        run: |
-          cd module3_task2
-          make package
       - name: make lint
         run: |
-          cd module3_task2
+          cd module3_task3
           make lint
       - name: unit-tests
         run: |
-          cd module3_task2
+          cd module3_task3
           make unit-tests
       - name: integration-tests
         run: |
-          cd module3_task2
+          cd module3_task3
           make integration-tests
       - name: validate
         run: |
-          cd module3_task2
+          cd module3_task3
           make validate
+      - name: make package
+        run: |
+          cd module3_task3
+          make package
+      - name: release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/1.0.0')
+        with:
+          files: |
+            module3_task3/awesome-website.zip
+            module3_task3/DEPLOY.md
+          body: |
+            # APLICATION'S DEPLOYMENT
+
+            A quickstart of hugo website and how to easy set it.
+            ## What is in the archive and how to unarchive it?
+            you can unarchive it ...
+            ## What are the commands to start and stop the application?
+            you can stop it ...
+            ## How to customize where the application logs are written?
+            you can customize it ...
+            ## How to “quickly” verify that the application is running?
+            you can check ...
+            ## zip
+            ## tag
