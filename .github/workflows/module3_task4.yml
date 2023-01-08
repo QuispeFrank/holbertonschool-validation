@@ -7,7 +7,7 @@ on:
     branch:
       - 'main'
     tags:
-      - '1.*.*'
+      - '2.*.*'
   schedule:
     - cron: '9 9 * * *'
 jobs:
