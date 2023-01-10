@@ -65,7 +65,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          body_path: ${{ github.workspace }}/module3_task4/DEPLOY.md
+          body_path: module3_task4/DEPLOY.md
           token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
           files: |
             module3_task4/awesome-website.zip
