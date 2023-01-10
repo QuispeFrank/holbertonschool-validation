@@ -5,8 +5,8 @@ on:
   push:
     branch:
       - 'main'
-    #tags:
-      #- '1.*.*'
+    tags:
+      - '1.*.*'
   schedule:
     - cron: '9 9 * * *'
   pull_request:
@@ -68,13 +68,3 @@ jobs:
           files: |
             module3_task4/awesome-website.zip
             module3_task4/DEPLOY.md
-
-      - name: I'm on release?
-        if: startsWith(github.head_ref, 'releases/')
-        run: |
-            echo 'hola estoy en la rama releases'
-
-      - name: I'm on main
-        if: ${{ github.ref == 'refs/heads/main'}}
-        run: |
-            echo 'hola estoy en la rama main'
