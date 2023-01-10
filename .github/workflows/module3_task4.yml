@@ -1,15 +1,18 @@
 ---
+
 name: module3_task4
 on:
   push:
-    #paths:
-      #- 'module3_task4/**'
     branch:
       - 'main'
     tags:
-      - '2.*.*'
+      - '1.*.*'
   schedule:
     - cron: '9 9 * * *'
+  pull_request:
+    types:
+      - opened
+
 jobs:
   make-help:
     runs-on: ubuntu-18.04
@@ -65,3 +68,11 @@ jobs:
           files: |
             module3_task4/awesome-website.zip
             module3_task4/DEPLOY.md
+
+      - name: where are I
+        if: startsWith(github.head_ref, 'releases/')
+        run: |
+          echo 'hola estoy en la rama releases'
+        if: ${{ github.ref == 'refs/heads/main'}}
+        run: |
+          echo 'hola estoy en la rama main'
