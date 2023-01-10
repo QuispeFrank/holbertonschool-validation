@@ -69,10 +69,12 @@ jobs:
             module3_task4/awesome-website.zip
             module3_task4/DEPLOY.md
 
-      - name: where are I
-        - if: startsWith(github.head_ref, 'releases/')
-          run: |
+      - name: I'm on release?
+        if: startsWith(github.head_ref, 'releases/')
+        run: |
             echo 'hola estoy en la rama releases'
-        - if: ${{ github.ref == 'refs/heads/main'}}
-          run: |
+
+      - name: I'm on main
+        if: ${{ github.ref == 'refs/heads/main'}}
+        run: |
             echo 'hola estoy en la rama main'
