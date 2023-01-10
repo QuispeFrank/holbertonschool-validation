@@ -47,5 +47,5 @@ the environment variables POST_TITLE and POST_NAME.
 * validate:
 * help: Shows a short help description about Makefile usage.
 
-### AUTH
+## AUTH
 * Quispe Frank
