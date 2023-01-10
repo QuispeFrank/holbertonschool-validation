@@ -1,0 +1,71 @@
+---
+
+name: module3_task5
+on:
+  push:
+    branch:
+      - 'main'
+    tags:
+      - '1.*.*'
+  schedule:
+    - cron: '9 9 * * *'
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  make-help:
+    runs-on: ubuntu-18.04
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: setup
+        run: |
+          cd module3_task5
+          ./setup.sh
+
+      - name: make build
+        run: |
+          cd module3_task5
+          make build
+
+      - name: make lint
+        run: |
+          cd module3_task5
+          make lint
+
+      - name: unit-tests
+        run: |
+          cd module3_task5
+          make unit-tests
+
+      - name: integration-tests
+        run: |
+          cd module3_task5
+          make integration-tests
+
+      - name: validate
+        run: |
+          cd module3_task5
+          make validate
+
+      - name: make package
+        run: |
+          cd module3_task5
+          make package
+
+      - name: release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          body_path: module3_task5/DEPLOY.txt
+          files: |
+            module3_task5/awesome-website.zip
+            module3_task5/DEPLOY.md
