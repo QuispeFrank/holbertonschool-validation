@@ -5,8 +5,8 @@ on:
   push:
     branch:
       - 'main'
-    tags:
-      - '1.*.*'
+    #tags:
+      #- '1.*.*'
   schedule:
     - cron: '9 9 * * *'
   pull_request:
