@@ -47,3 +47,4 @@ the environment variables POST_TITLE and POST_NAME.
 * validate:
 * help: Shows a short help description about Makefile usage.
 * releaseTest: testing v1
+* task 5 test: v1
