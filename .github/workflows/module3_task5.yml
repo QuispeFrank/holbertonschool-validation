@@ -8,9 +8,6 @@ on:
   schedule:
     - cron: '9 9 * * *'
   pull_request:
-    types:
-      - opened
-      - closed
 
 jobs:
   make-help:
