@@ -10,6 +10,7 @@ on:
   pull_request:
     types:
       - opened
+      - closed
 
 jobs:
   make-help:
@@ -22,7 +23,7 @@ jobs:
       - name: node
         uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '18'
 
       - name: setup
         run: |
@@ -75,7 +76,7 @@ jobs:
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
-          enable-pull-request-comment: false
+          enable-pull-request-comment: true
           enable-commit-comment: true
           overwrites-pull-request-comment: true
         env:
